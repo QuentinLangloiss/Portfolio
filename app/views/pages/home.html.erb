@@ -1,13 +1,91 @@
-<nav class="navbar">
+<nav class="navbar" style="margin-right: 45px; margin-left: 45px">
   <%= image_tag 'logo_transparent.png', alt: 'logo', style: "width: 150px"%>
   <%= link_to "Me contacter", @contact, class: "button-contact" %>
 </nav>
-<div style="display: flex; justify-content: space-between">
-
+<div class="container" style="display: flex;flex-direction: column;align-items: center;">
+  <h1 class="titre-principal">Développeur Fullstack</h1>
+  <p class="slogan">Je code et design un tas de choses, et j'adore ce que je fais.</p>
+  <%= image_tag 'photo_profile.jpg', alt: "photo de profil", class: "photo-profile"%>
+</div>
+<div style="display:flex; justify-content: space-evenly">
+  <%= image_tag('illustration3.svg', alt: "illustration", style: "width: 200px")  %>
+  <%= image_tag('illustration2.svg', alt: "illustration", style: "width: 200px")  %>
+  <%= image_tag('illustration.svg', alt: "illustration", style: "width: 200px")  %>
 </div>
 
-<h1>Développeur Fullstack</h1>
-<h3>Je code et design un tas de choses, et j'adore ce que je fais</h3>
-<%= image_tag 'photo_profile.jpg', alt: "photo de profil", class: "photo-profile"%>
-<p>Salut, je suis Quentin. Ravie de te rencontrer</p>
-<p>Depuis que j'ai commencé le développement web j'ai coder et appris un tas de choses, j'ai d'abord appris en autodidacte en codant des sites web pour m'amuser. Puis j'ai éffectuer un bootcamp de développeur web full stack dans l'école Le Wagon qui m'a permis d'évoluer, de me perfectionner et d'acquérir la certification de concepteur développeur d'application web. Je suis naturellement curieux et je m'efforce constamment d'améliorer mes compétences et d'en apprendre de nouvelles</p>
+<div class="container-overlay">
+  <div class="presentation">
+    <div class="center-description">
+      <p style="font-size: 32px; font-weight: 600">Salut, je suis Quentin. Ravie de te rencontrer.</p>
+      <p style="font-size: 18px; font-weight: 400">Depuis que j'ai commencé le développement web j'ai coder et appris un tas de choses, j'ai d'abord appris en autodidacte en codant des sites web pour m'amuser. Puis j'ai éffectuer un bootcamp de développeur web full stack dans l'école Le Wagon qui m'a permis d'évoluer, de me perfectionner et d'acquérir la certification de concepteur développeur d'application web. Je suis naturellement curieux et je m'efforce constamment d'améliorer mes compétences et d'en apprendre de nouvelles</p>
+    </div>
+  </div>
+  <div class="overlay-div">
+    <div class="row">
+      <div class="skills col-4" style="border-right: 1px solid #A0BFE0">
+        <i class="fa-solid fa-code" style="color: #279eff;"></i>
+        <p style="margin-top: 10px;">Développeur Frontend</p>
+        <p style="font-size: 14px; font-weight: 400;">J'adore voir les idées prendre vie, rendre les sites web vivants et les voir prendre forme du début à la fin.</p>
+        <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Stack technique :</p>
+        <p style="font-size: 14px; font-weight: 400;">HTML, CSS, Sass, JavaScript, React, Stimulus, VueJS</p>
+        <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Outils de développement</p>
+        <p style="font-size: 14px; font-weight: 400;">Bootstrap, Tailwind, GitHub, Vite</p>
+      </div>
+      <div class="skills col-4" style="border-right: 1px solid #A0BFE0">
+        <i class="fa-solid fa-terminal" style="color: #279eff;"></i>
+        <p style="margin-top: 10px;">Développeur Backend</p>
+        <p style="font-size: 14px; font-weight: 400;">Je créer tout types d'applications web, des applications qui sont fonctionnels, sécurisés, et simple d'utilisation.</p>
+        <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Stack technique :</p>
+        <p style="font-size: 14px; font-weight: 400;">Ruby on Rails, Python, Php, Git, SQL</p>
+        <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Outils de développement :</p>
+        <p style="font-size: 14px; font-weight: 400;">Terminal, GitHub, Heroku, VsCode, OVH, MangoDB, PostgreSQL</p>
+      </div>
+      <div class="skills col-4">
+        <i class="fa-solid fa-wand-magic-sparkles" style="color: #279eff;"></i>
+        <p style="margin-top: 10px;">Designer</p>
+        <p style="font-size: 14px; font-weight: 400;">Je design des choses simples, qui facilite la compréhension du site et qui rende l'expérience utilisateur plus agréable.</p>
+        <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Ce que j'adore design :</p>
+        <p style="font-size: 14px; font-weight: 400;">Web, Apps, logo, maquette</p>
+        <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Outils de design :</p>
+        <p style="font-size: 14px; font-weight: 400;">Figma, Font Awesome, FlatIcon, Canva</p>
+      </div>
+    </div>
+  </div>
+  <div class="div-grise">
+  </div>
+</div>
+<div class="container">
+  <div class="recent-works">
+    <h3 class="recent-work-title">Mes travaux récents</h3>
+    <p style="margin-top: 15px">Voici quelques projets que j'ai éffectué. Vous souhaitez plus de détails ? <%= link_to "Envoyez-moi un e-mail", @contact, style: "text-decoration: none" %>.</p>
+    <div class="row" style="margin-top: 70px">
+      <div class="col-4">
+        <div class="card">
+          <%= image_tag "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
+          <div class="overlay">
+            <p style="color: #ffffff; margin-top: 100px">Texte qui apparaît au survol</p>
+            <%= link_to "Visiter le site Web", "#", class: "button-visit" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <%= image_tag "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
+          <div class="overlay">
+            <p style="color: #ffffff; margin-top: 100px">Texte qui apparaît au survol</p>
+            <%= link_to "Visiter le site Web", "#", class: "button-visit" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <%= image_tag "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
+          <div class="overlay">
+            <p style="color: #ffffff; margin-top: 100px">Texte qui apparaît au survol</p>
+            <%= link_to "Visiter le site Web", "#", class: "button-visit" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

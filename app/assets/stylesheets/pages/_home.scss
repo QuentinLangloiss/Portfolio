@@ -1,25 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&display=swap');
+
+
 // Specific CSS for your home-page
 body {
   background-color: #F9F5F6;
   color: black;
 }
 
+p {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
 .photo-profile {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
+  margin-bottom: 30px;
 }
 
 .button-contact {
   background-color: #F9F5F6;
   color: #279EFF;
-  border: 1px solid #279EFF;
+  border: 2px solid #279EFF;
   border-radius: 25px;
   padding: 10px;
   margin: 10px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
   height: 50px;
 }
@@ -28,4 +40,141 @@ body {
   background-color: #279EFF;
   color: white;
   transition: ease 0.3s;
+}
+
+.titre-principal {
+  font-size: 50px;
+  font-weight: 600;
+  color: #001C30;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.slogan {
+  font-size: 18px;
+  font-weight: 400;
+  color: #001C30;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.presentation {
+  background-color: #279EFF;
+  height: 500px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.center-description {
+  padding-top: 130px;
+  padding-bottom: 250px;
+  padding-right: 250px;
+  padding-left: 250px;
+}
+
+.div-grise {
+  height: 500px;
+  color: #001C30;
+  text-align: center;
+}
+
+.presentation,
+.overlay-div,
+.div-grise {
+  position: relative;
+}
+
+.container-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay-div {
+  background-color: #ffffff;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 15px;
+  width: 80%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+i {
+  padding: 10px;
+  background-color: #D4FAFC;
+  border-radius: 50%;
+}
+
+.skills {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.recent-works {
+  height: 500px;
+  color: #001C30;
+  text-align: center;
+}
+
+.recent-work-title {
+  margin-top: 100px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card {
+  width: 22rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image {
+  transition: filter 0.3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 5, 30, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: block;
+  text-align: center;
+}
+
+.card:hover .image {
+  filter: blur(5px);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.button-visit {
+  background-color: #279EFF;
+  color: white;
+  border: 2px solid #279EFF;
+  border-radius: 25px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
 }
