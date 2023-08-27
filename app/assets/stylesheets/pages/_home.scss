@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-i {
+.icone-overlay {
   padding: 10px;
   background-color: #D4FAFC;
   border-radius: 50%;
@@ -134,7 +134,7 @@ i {
 }
 
 .card {
-  width: 22rem;
+  width: 100%;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -177,4 +177,56 @@ i {
   font-size: 12px;
   font-weight: 500;
   text-decoration: none;
+}
+
+.contact-me {
+  height: 170px;
+  color: #ffffff;
+  background-color: #793FDF;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.button-cta {
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.button-cta:hover {
+  background-color: #ffffff;
+  color: #793FDF;
+  transition: ease 0.3s;
+}
+
+footer {
+  height: 400px;
+  background-color: #001C30;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.list-icon {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon-link {
+  border: 2px solid #a0bfe0;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.icon-link:hover {
+  background-color: #a0bfe0;
+  color: #001C30;
+  transition: ease 0.3s;
 }

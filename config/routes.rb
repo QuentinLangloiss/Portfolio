@@ -18,7 +18,9 @@ Rails.application.routes.draw do
 
   # Autres pages statiques
   get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  # get 'contact', to: 'pages#contact'
+  get 'contact', to: 'contacts#new'
+  post '/contacts', to: 'contacts#create'
   # Defines the root path route ("/")
   # root "articles#index"
 end

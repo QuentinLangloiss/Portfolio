@@ -1,6 +1,6 @@
 <nav class="navbar" style="margin-right: 45px; margin-left: 45px">
   <%= image_tag 'logo_transparent.png', alt: 'logo', style: "width: 150px"%>
-  <%= link_to "Me contacter", @contact, class: "button-contact" %>
+  <%= link_to "Me contacter", contact_path, class: "button-contact" %>
 </nav>
 <div class="container" style="display: flex;flex-direction: column;align-items: center;">
   <h1 class="titre-principal">Développeur Fullstack</h1>
@@ -23,7 +23,7 @@
   <div class="overlay-div">
     <div class="row">
       <div class="skills col-4" style="border-right: 1px solid #A0BFE0">
-        <i class="fa-solid fa-code" style="color: #279eff;"></i>
+        <i class="fa-solid fa-code icone-overlay" style="color: #279eff;"></i>
         <p style="margin-top: 10px;">Développeur Frontend</p>
         <p style="font-size: 14px; font-weight: 400;">J'adore voir les idées prendre vie, rendre les sites web vivants et les voir prendre forme du début à la fin.</p>
         <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Stack technique :</p>
@@ -32,7 +32,7 @@
         <p style="font-size: 14px; font-weight: 400;">Bootstrap, Tailwind, GitHub, Vite</p>
       </div>
       <div class="skills col-4" style="border-right: 1px solid #A0BFE0">
-        <i class="fa-solid fa-terminal" style="color: #279eff;"></i>
+        <i class="fa-solid fa-terminal icone-overlay" style="color: #279eff;"></i>
         <p style="margin-top: 10px;">Développeur Backend</p>
         <p style="font-size: 14px; font-weight: 400;">Je créer tout types d'applications web, des applications qui sont fonctionnels, sécurisés, et simple d'utilisation.</p>
         <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Stack technique :</p>
@@ -41,7 +41,7 @@
         <p style="font-size: 14px; font-weight: 400;">Terminal, GitHub, Heroku, VsCode, OVH, MangoDB, PostgreSQL</p>
       </div>
       <div class="skills col-4">
-        <i class="fa-solid fa-wand-magic-sparkles" style="color: #279eff;"></i>
+        <i class="fa-solid fa-wand-magic-sparkles icone-overlay" style="color: #279eff;"></i>
         <p style="margin-top: 10px;">Designer</p>
         <p style="font-size: 14px; font-weight: 400;">Je design des choses simples, qui facilite la compréhension du site et qui rende l'expérience utilisateur plus agréable.</p>
         <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Ce que j'adore design :</p>
@@ -57,11 +57,11 @@
 <div class="container">
   <div class="recent-works">
     <h3 class="recent-work-title">Mes travaux récents</h3>
-    <p style="margin-top: 15px">Voici quelques projets que j'ai éffectué. Vous souhaitez plus de détails ? <%= link_to "Envoyez-moi un e-mail", @contact, style: "text-decoration: none" %>.</p>
+    <p style="margin-top: 15px">Voici quelques projets que j'ai éffectué. Vous souhaitez plus de détails ? <%= link_to "Envoyez-moi un e-mail", contact_path, style: "text-decoration: none" %>.</p>
     <div class="row" style="margin-top: 70px">
       <div class="col-4">
         <div class="card">
-          <%= image_tag "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
+          <%= image_tag "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
           <div class="overlay">
             <p style="color: #ffffff; margin-top: 100px">Texte qui apparaît au survol</p>
             <%= link_to "Visiter le site Web", "#", class: "button-visit" %>
@@ -70,7 +70,7 @@
       </div>
       <div class="col-4">
         <div class="card">
-          <%= image_tag "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
+          <%= image_tag "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
           <div class="overlay">
             <p style="color: #ffffff; margin-top: 100px">Texte qui apparaît au survol</p>
             <%= link_to "Visiter le site Web", "#", class: "button-visit" %>
@@ -79,7 +79,7 @@
       </div>
       <div class="col-4">
         <div class="card">
-          <%= image_tag "https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
+          <%= image_tag "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHRlY2h8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
           <div class="overlay">
             <p style="color: #ffffff; margin-top: 100px">Texte qui apparaît au survol</p>
             <%= link_to "Visiter le site Web", "#", class: "button-visit" %>
@@ -88,4 +88,28 @@
       </div>
     </div>
   </div>
+  <div class="contact-me">
+    <div class="row h-100" style="display: flex; align-items: center">
+      <div class="col-4">
+        <p style="font-weight: 600">Vous avez un projet ? Vous souhaitez que l'on travaille ensemble ? Nous devrions réserver du temps pour se parler.</p>
+      </div>
+      <div class="col-4">
+        <p style="font-size: 24px; font-weight: 800">Démarrez un projet</p>
+      </div>
+      <div class="col-4">
+        <%= link_to "Allons-y 🤝", contact_path, class: "button-cta" %>
+      </div>
+    </div>
+  </div>
 </div>
+<footer>
+  <%= image_tag 'logo_transparent.png', alt: 'logo', style: "width: 150px"%>
+  <p style="color: #A0BFE0">Créons le site web de vos rêves, ligne par ligne.</p>
+  <div class="list-icon" style="margin-top: 50px; margin-bottom: 50px;">
+    <a href="https://www.linkedin.com/in/quentin-langloiss/" target="_blank"><i  class="fa-brands fa-linkedin icon-link"></i></a>
+    <a href="https://github.com/QuentinLangloiss" target="_blank"><i class="fa-brands fa-github icon-link"></i></a>
+    <a href="#" target="_blank"><i class="fa-regular fa-envelope icon-link"></i></a>
+    <a href="https://twitter.com/NewCeos" target="_blank"><i class="fa-brands fa-x-twitter icon-link"></i></a>
+  </div>
+  <p style="color: #A0BFE0">Site Web crée par moi <i class="fa-regular fa-copyright" style="color: #a0bfe0;"></i> Quentin Langlois</p>
+</footer>

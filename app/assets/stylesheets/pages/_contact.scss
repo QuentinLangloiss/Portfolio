@@ -1,0 +1,60 @@
+.contact-form {
+  text-align: center;
+  /* Ajoutez les styles de mise en forme pour votre formulaire ici */
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-column {
+  text-align: left;
+  margin: 0 20px;
+}
+
+.form-column label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-row label[for="contact_message"] {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+}
+
+.form-row textarea {
+  width: 50%;
+  height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"] {
+  width: 325px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.form-row input[type="submit"] {
+  margin-top: 10px;
+}
+
+.form-button {
+  background-color: #ffffff;
+  color: #279EFF;
+  border-radius: 25px;
+  border: 2px solid #279EFF;
+  padding: 10px;
+  font-size: 26px;
+}
+
+.form-button:hover {
+  background-color: #279EFF;
+  color: #ffffff;
+  transition: ease 0.3s;
+}
