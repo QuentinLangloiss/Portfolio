@@ -1,38 +1,33 @@
-<nav class="navbar" style="margin-right: 45px; margin-left: 45px">
+<nav class="navbar">
   <%= image_tag 'logo_transparent.png', alt: 'logo', style: "width: 150px"%>
   <%= link_to "Retour à la page d'accueil", root_path, class: "button-contact" %>
 </nav>
 <hr style="color: #B2A4FF">
 <h3 style="text-align: center; font-size: 32px; font-weight: 300;">Merci de prendre le temps de me contacter.</h3>
 <h3 style="text-align: center; font-size: 32px; font-weight: 300;">Comment puis-je vous aider aujourd'hui ?</h3>
-<div class="contact-form">
-  <%= form_with(model: @contact, url: contacts_path, local: true) do |form| %>
-    <% if @contact.errors.any? %>
-    <% puts @contact.errors.full_messages %>
-      <div class="errors">
-        <h3>Erreur(s) empêchant l'envoi du formulaire :</h3>
-        <ul>
-          <% @contact.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-    <div class="form-row">
-      <div class="form-column">
-        <%= form.label :name, "Nom" %>
-        <%= form.text_field :name %>
-      </div>
-      <div class="form-column">
-        <%= form.label :email, "Email" %>
-        <%= form.email_field :email %>
-      </div>
-    </div>
-    <%= form.label :message, "Message", style: "margin-bottom: 5px" %>
-    <div class="form-row">
-      <%= form.text_area :message %>
-    </div>
 
-    <%= form.submit "Envoyer", class: "form-button" %>
-  <% end %>
-</div>
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <%= value %>
+  </div>
+<% end %>
+
+<%= form_with scope: :contacts, url: contacts_path, method: :post, local: true, class: "container" do |form| %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control" %>
+  </div>
+  <%= form.submit "Envoyer", class: "btn btn-primary mt-3" %>
+<% end %>

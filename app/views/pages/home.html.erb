@@ -1,4 +1,4 @@
-<nav class="navbar" style="margin-right: 45px; margin-left: 45px">
+<nav class="navbar">
   <%= image_tag 'logo_transparent.png', alt: 'logo', style: "width: 150px"%>
   <%= link_to "Me contacter", contact_path, class: "button-contact" %>
 </nav>
@@ -8,21 +8,21 @@
   <%= image_tag 'photo_profile.jpg', alt: "photo de profil", class: "photo-profile"%>
 </div>
 <div style="display:flex; justify-content: space-evenly">
-  <%= image_tag('illustration3.svg', alt: "illustration", style: "width: 200px")  %>
-  <%= image_tag('illustration2.svg', alt: "illustration", style: "width: 200px")  %>
-  <%= image_tag('illustration.svg', alt: "illustration", style: "width: 200px")  %>
+  <%= image_tag('illustration3.svg', alt: "illustration", style: "width: 200px", class: "illustration")  %>
+  <%= image_tag('illustration2.svg', alt: "illustration", style: "width: 200px", class: "illustration")  %>
+  <%= image_tag('illustration.svg', alt: "illustration", style: "width: 200px", class: "illustration")  %>
 </div>
 
 <div class="container-overlay">
   <div class="presentation">
     <div class="center-description">
       <p style="font-size: 32px; font-weight: 600">Salut, je suis Quentin. Ravie de te rencontrer.</p>
-      <p style="font-size: 18px; font-weight: 400">Depuis que j'ai commencé le développement web j'ai coder et appris un tas de choses, j'ai d'abord appris en autodidacte en codant des sites web pour m'amuser. Puis j'ai éffectuer un bootcamp de développeur web full stack dans l'école Le Wagon qui m'a permis d'évoluer, de me perfectionner et d'acquérir la certification de concepteur développeur d'application web. Je suis naturellement curieux et je m'efforce constamment d'améliorer mes compétences et d'en apprendre de nouvelles</p>
+      <p style="font-size: 18px; font-weight: 400">Depuis que j'ai commencé le développement web j'ai coder et appris un tas de choses, j'ai d'abord appris en autodidacte en codant des sites web pour m'amuser. Puis j'ai éffectuer un bootcamp de développeur web full stack dans l'école Le Wagon qui m'a permis d'évoluer, de me perfectionner et d'acquérir la certification de concepteur développeur d'application web. Je suis naturellement curieux et je m'efforce constamment d'améliorer mes compétences et d'en apprendre de nouvelles.</p>
     </div>
   </div>
   <div class="overlay-div">
     <div class="row">
-      <div class="skills col-4" style="border-right: 1px solid #A0BFE0">
+      <div class="skills col-md-4 col" style="border-right: 1px solid #A0BFE0">
         <i class="fa-solid fa-code icone-overlay" style="color: #279eff;"></i>
         <p style="margin-top: 10px;">Développeur Frontend</p>
         <p style="font-size: 14px; font-weight: 400;">J'adore voir les idées prendre vie, rendre les sites web vivants et les voir prendre forme du début à la fin.</p>
@@ -31,7 +31,7 @@
         <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Outils de développement</p>
         <p style="font-size: 14px; font-weight: 400;">Bootstrap, Tailwind, GitHub, Vite</p>
       </div>
-      <div class="skills col-4" style="border-right: 1px solid #A0BFE0">
+      <div class="skills col-md-4" style="border-right: 1px solid #A0BFE0">
         <i class="fa-solid fa-terminal icone-overlay" style="color: #279eff;"></i>
         <p style="margin-top: 10px;">Développeur Backend</p>
         <p style="font-size: 14px; font-weight: 400;">Je créer tout types d'applications web, des applications qui sont fonctionnels, sécurisés, et simple d'utilisation.</p>
@@ -40,7 +40,7 @@
         <p style="font-size: 16px; font-weight: 600; color: #87CBB9">Outils de développement :</p>
         <p style="font-size: 14px; font-weight: 400;">Terminal, GitHub, Heroku, VsCode, OVH, MangoDB, PostgreSQL</p>
       </div>
-      <div class="skills col-4">
+      <div class="skills col-md-4">
         <i class="fa-solid fa-wand-magic-sparkles icone-overlay" style="color: #279eff;"></i>
         <p style="margin-top: 10px;">Designer</p>
         <p style="font-size: 14px; font-weight: 400;">Je design des choses simples, qui facilite la compréhension du site et qui rende l'expérience utilisateur plus agréable.</p>
@@ -58,8 +58,8 @@
   <div class="recent-works">
     <h3 class="recent-work-title">Mes travaux récents</h3>
     <p style="margin-top: 15px">Voici quelques projets que j'ai éffectué. Vous souhaitez plus de détails ? <%= link_to "Envoyez-moi un e-mail", contact_path, style: "text-decoration: none" %>.</p>
-    <div class="row" style="margin-top: 70px">
-      <div class="col-4">
+    <div class="row work-responsive">
+      <div class="col-md-4">
         <div class="card">
           <%= image_tag "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
           <div class="overlay">
@@ -68,7 +68,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-md-4">
         <div class="card">
           <%= image_tag "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
           <div class="overlay">
@@ -77,7 +77,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-md-4">
         <div class="card">
           <%= image_tag "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fHRlY2h8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
           <div class="overlay">
@@ -90,13 +90,13 @@
   </div>
   <div class="contact-me">
     <div class="row h-100" style="display: flex; align-items: center">
-      <div class="col-4">
+      <div class="col-md-4">
         <p style="font-weight: 600">Vous avez un projet ? Vous souhaitez que l'on travaille ensemble ? Nous devrions réserver du temps pour se parler.</p>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <p style="font-size: 24px; font-weight: 800">Démarrez un projet</p>
       </div>
-      <div class="col-4">
+      <div class="col-6 col-md-4">
         <%= link_to "Allons-y 🤝", contact_path, class: "button-cta" %>
       </div>
     </div>

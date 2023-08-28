@@ -8,7 +8,6 @@
 <div class="contact-form">
   <%= form_with(model: @contact, url: contacts_path, local: true) do |form| %>
     <% if @contact.errors.any? %>
-    <% puts @contact.errors.full_messages %>
       <div class="errors">
         <h3>Erreur(s) empêchant l'envoi du formulaire :</h3>
         <ul>
@@ -36,3 +35,14 @@
     <%= form.submit "Envoyer", class: "form-button" %>
   <% end %>
 </div>
+<% if flash[:success] %>
+  <div class="flash flash-success">
+    <%= flash[:success] %>
+  </div>
+<% end %>
+
+<% if flash[:error] %>
+  <div class="flash flash-error">
+    <%= flash[:error] %>
+  </div>
+<% end %>

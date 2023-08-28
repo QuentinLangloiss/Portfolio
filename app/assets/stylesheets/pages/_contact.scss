@@ -58,3 +58,20 @@
   color: #ffffff;
   transition: ease 0.3s;
 }
+
+.flash.flash-success {
+  background-color: #32CD32; /* Couleur verte */
+  color: #fff; /* Couleur du texte */
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Stylisation des messages d'erreur */
+.flash.flash-error {
+  background-color: #FF6347; /* Couleur rouge */
+  color: #fff; /* Couleur du texte */
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}

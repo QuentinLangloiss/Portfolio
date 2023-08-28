@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   # get 'contact', to: 'pages#contact'
   get 'contact', to: 'contacts#new'
   post '/contacts', to: 'contacts#create'
+  # root "contact_form#new"
+  resources :contacts, only: %i[new create]
   # Defines the root path route ("/")
   # root "articles#index"
 end

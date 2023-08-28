@@ -15,6 +15,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
 }
 
+.navbar {
+  margin-right: 45px;
+  margin-left: 45px;
+}
+
 .photo-profile {
   width: 220px;
   height: 220px;
@@ -133,6 +138,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.work-responsive {
+  margin-top: 70px;
+}
+
 .card {
   width: 100%;
   position: relative;
@@ -229,4 +238,71 @@ footer {
   background-color: #a0bfe0;
   color: #001C30;
   transition: ease 0.3s;
+}
+
+@media (max-width: 768px) {
+  .illustration {
+    display: none;
+  }
+  .center-description {
+    padding-top: 60px;
+    padding-bottom: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .navbar {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .photo-profile {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+  .container-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  .overlay-div {
+    background-color: #ffffff;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 15px;
+    width: 80%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .recent-works {
+    height: 500px;
+    color: #001C30;
+    text-align: center;
+    margin-top: 800px;
+  }
+  .card {
+    margin-top: 15px;
+  }
+  .work-responsive {
+    margin-top: 10px;
+  }
+  .contact-me {
+    height: 210px;
+    color: #ffffff;
+    background-color: #793FDF;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 500px;
+    margin-bottom: 100px;
+  }
 }
