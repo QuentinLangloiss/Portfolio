@@ -1,6 +1,6 @@
 <nav class="navbar">
   <%= image_tag 'logo_transparent.png', alt: 'logo', style: "width: 150px"%>
-  <%= link_to "Me contacter", contact_path, class: "button-contact" %>
+  <%= link_to "Me contacter", "mailto:quentin.langlois147@gmail.com?subject=Message%20from%20website", class: "button-contact" %>
 </nav>
 <div class="container" style="display: flex;flex-direction: column;align-items: center;">
   <h1 class="titre-principal">Développeur Fullstack</h1>
@@ -57,7 +57,7 @@
 <div class="container">
   <div class="recent-works">
     <h3 class="recent-work-title">Mes travaux récents</h3>
-    <p style="margin-top: 15px">Voici quelques projets que j'ai éffectué. Vous souhaitez plus de détails ? <%= link_to "Envoyez-moi un e-mail", contact_path, style: "text-decoration: none" %>.</p>
+    <p style="margin-top: 15px">Voici quelques projets que j'ai éffectué. Vous souhaitez plus de détails ? <%= link_to "Envoyez-moi un e-mail", "mailto:quentin.langlois147@gmail.com?subject=Message%20from%20website", style: "text-decoration: none" %>.</p>
     <div class="row work-responsive">
       <div class="col-md-4">
         <div class="card">
@@ -97,7 +97,7 @@
         <p style="font-size: 24px; font-weight: 800">Démarrez un projet</p>
       </div>
       <div class="col-6 col-md-4">
-        <%= link_to "Allons-y 🤝", contact_path, class: "button-cta" %>
+        <%= link_to "Allons-y 🤝", "mailto:quentin.langlois147@gmail.com?subject=Message%20from%20website", class: "button-cta" %>
       </div>
     </div>
   </div>
@@ -108,8 +108,10 @@
   <div class="list-icon" style="margin-top: 50px; margin-bottom: 50px;">
     <a href="https://www.linkedin.com/in/quentin-langloiss/" target="_blank"><i  class="fa-brands fa-linkedin icon-link"></i></a>
     <a href="https://github.com/QuentinLangloiss" target="_blank"><i class="fa-brands fa-github icon-link"></i></a>
-    <a href="#" target="_blank"><i class="fa-regular fa-envelope icon-link"></i></a>
+    <%= link_to "mailto:quentin.langlois147@gmail.com?subject=Message%20from%20website" do %>
+      <i class="fa-regular fa-envelope icon-link"></i>
+    <% end %>
     <a href="https://twitter.com/NewCeos" target="_blank"><i class="fa-brands fa-x-twitter icon-link"></i></a>
   </div>
-  <p style="color: #A0BFE0">Site Web crée par moi <i class="fa-regular fa-copyright" style="color: #a0bfe0;"></i> Quentin Langlois</p>
+  <p style="color: #A0BFE0">Site Web créé par moi <i class="fa-regular fa-copyright" style="color: #A0BFE0;"></i> Quentin Langlois</p>
 </footer>
