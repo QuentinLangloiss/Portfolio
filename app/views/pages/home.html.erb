@@ -60,11 +60,11 @@
     <p style="margin-top: 15px">Voici quelques projets que j'ai éffectué. Vous souhaitez plus de détails ? <%= link_to "Envoyez-moi un e-mail", "mailto:quentin.langlois147@gmail.com?subject=Message%20from%20website", style: "text-decoration: none" %>.</p>
     <div class="row work-responsive">
       <div class="col-md-4">
-        <div class="card">
-          <%= image_tag "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60", alt: "projet 1", class: "card-img-top rounded-3 image" %>
+        <div class="card" style="height: 100%;">
+          <%= image_tag "exemple_projet_1.png", alt: "projet 1", class: "card-img-top rounded-3 image" %>
           <div class="overlay">
             <p style="color: #ffffff; margin-top: 100px">Texte qui apparaît au survol</p>
-            <%= link_to "Visiter le site Web", "#", class: "button-visit" %>
+            <%= link_to "Visiter le site Web", "https://quentinlangloiss.github.io/landing/", target: "_blank", class: "button-visit" %>
           </div>
         </div>
       </div>
